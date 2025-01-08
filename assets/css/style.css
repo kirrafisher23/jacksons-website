@@ -319,27 +319,7 @@ nav ul li {
 
 }
 
-
-/*====================================================================
-                 About Section 
-======================================================================*/
-
-.main_about_area{
-    overflow: hidden;
-}
-
-.main_about_area .single_about i{
-    border:1px solid #ff9a5e;
-    color:#ff9a5e;
-    width:60px;
-    height: 60px;
-    line-height: 60px;
-    font-size:2.225rem;
-    border-radius: 50%;
-    margin-bottom:1.875rem;
-}
-
-
+S
 
 /*=================================================================
                     Service Section
@@ -374,6 +354,9 @@ nav ul li {
     margin-left:15%;
 }
 
+.single_service_area a{
+    color: black;
+}
 
 
 
