@@ -418,143 +418,6 @@ S
 
 
 /*=====================================================================
-                   Team Section
-====================================================================*/
-
-.main_team_area{
-    overflow: hidden;
-}
-.main_team_area .main_team_content{
-    margin-bottom:80px;
-    display: inline-block;
-}
-
-.single_team:hover .team_socail_area{
-    max-height: 40px;
-    overflow: hidden;
-
-}
-.single_team{
-    overflow: hidden;
-}
-.single_team:hover .single_team_text{
-    display: none;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-.team_socail_area{
-    -webkit-transition: max-height 1s; 
-    -moz-transition: max-height 1s; 
-    -ms-transition: max-height 1s; 
-    -o-transition: max-height 1s; 
-    transition: max-height 1s;  
-    overflow: hidden;
-    max-height: 0;
-}
-.team_socail_area a i{
-    color:#cecece;
-    padding: 5px;
-    transition: all 0.6s;
-}
-.team_socail_area a:hover i{
-    color:#444;
-}
-
-.main_team_area .single_team img{
-    width:100%;
-}
-.main_team_area .single_team .single_team_text{
-    padding: 20px;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-.main_team_area .single_team .single_team_text h6{
-    font-weight: 700;
-    color:#231f20;
-}
-.main_team_area .single_team .single_team_text{
-    font-weight: 300;
-}
-
-/*=====================================================================
-                    Testimonial Section 
-====================================================================*/
-
-.main_testimonial_area{
-    background: url(../images/testbg.jpg) no-repeat top center;
-    background-size:cover;
-    position: relative;
-}
-.main_testimonial_area .head_title h2{
-    color:#fff;
-}
-.main_testimonial_area .head_title h6{
-    color:#fff;
-}
-.testimonial_content .single_test h3{
-    width:80%;
-    margin:30px auto;
-    color:#fff;
-}
-.testimonial_content .single_test h3:before{
-    content: "\f10e";
-    text-align: left;
-    font-family: fontawesome;
-    font-size: 3rem;
-    color: #7d7b7d;
-    position: absolute;
-    z-index: -1;
-    padding: 5px;
-    left: 9%;    
-}
-
-.testimonial_content .single_test p{
-    font-size:10px;
-    font-weight: 100;
-    color:#fff;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/*=====================================================================
-                    Blog Section 
-====================================================================*/
-
-.main_blog_area{
-    overflow: hidden;
-}
-.main_blog_area .single_blog_menu{}
-.main_blog_area .single_blog{}
-.main_blog_area .single_blog_menu h2{
-    border-right: 2px solid #bbb;
-}
-.main_blog_area .single_blog_menu ul{
-    margin-top:30%;
-}
-.main_blog_area .single_blog_menu ul li a{
-    color:#bbb;
-    line-height: 2.5rem;
-}
-.main_blog_area .single_blog_menu ul li.active a{
-    color:#1e1e1e;
-    font-weight: 700;
-}
-.main_blog_area .single_blog .single_blog_img{}
-.main_blog_area .single_blog .single_blog_text{}
-
-.main_blog_area .single_blog .single_blog_text h6{
-    font-weight: 500;
-}
-.main_blog_area .single_blog .single_blog_text span{
-    font-weight: 100;
-    font-size:0.714rem;
-}
-.main_blog_area{}
-
-
-
-
-/*=====================================================================
                     Contact Us Section
 ====================================================================*/
 
@@ -592,6 +455,14 @@ S
 }
 .main_contactus_area input[type=submit]:focus {
     outline:0;
+}
+
+.contact_us_right {
+    padding-right: 15px; /* Reduce padding on the right */
+}
+
+.main_contact_area {
+    padding-left: 1px; /* Adjust spacing for the contact form */
 }
 
 
