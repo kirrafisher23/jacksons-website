@@ -276,6 +276,7 @@ nav ul li {
     width:100%;
     margin:20px auto;
     color: black;
+    text-shadow: .5px .5px pink;
 }
 .main_home ul li a{
     color:#ffff;
@@ -553,4 +554,101 @@ S
 
 }*/
 
+/*=================================================================
+                    Modal For Artwork Page
+===================================================================*/
+/* Style the Image Used to Trigger the Modal */
 
+/* Container for images */
+.img-container {
+    display: flex; /* Makes child elements (images) align horizontally */
+    justify-content: center; /* Centers images horizontally within the container */
+    align-items: flex-start; /* Aligns images to the top */
+    gap: 20px; /* Adds space between the images */
+    padding: 20px; /* Optional: Adds padding around the container */
+}
+
+/* Individual images */
+#myImg {
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 325px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
