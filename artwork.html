@@ -54,28 +54,23 @@
 
     <body data-spy="scroll" data-target="#scrollspy">
 
-
-
-
-
         <div class="main_figur">
 
-            <div class="container">
-                <div class="div-menu">
-                    <header class="cd-header">
-                        <a href="index.html" class="brand-logo text-left">Jackson Domenico</a>
-                        <a class="cd-menu-trigger" href="#main-nav"><span></span></a>
-                    </header>
-                </div>
-
-                <nav id="main-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="artwork.html">Artwork</a></li>
-                    </ul>
-                    <a href="#" class="cd-close-menu">Close<span></span></a>
-                </nav>
-            </div>
+            <header class="cd-header">
+                <a href="index.html" class="brand-logo text-left">Jackson Domenico | Artwork</a>
+                <a class="cd-menu-trigger" href="#"><span></span></a>
+            </header>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artwork.html">Artwork</a></li>
+                </ul>
+                <a href="#" class="cd-close-menu">Close<span></span></a>
+            </nav>
+            
+            <div class="cd-shadow-layer"></div>
+            
 
             <!-- About Section -->
             <section id="about" class="about">
@@ -84,19 +79,10 @@
                         <div class="col-md-12 ">
                             <div class="single_service_area m-t-3 p-t-2">
                                 <div class="row">
-                                    <div class="col-md-6 no-padding">
-                                        <div class="signle_service_left text-sm-center wow fadeInleft">
-                                            <img src="assets/images/bio.png" alt="" />
-                                        </div>
-                                    </div>
                                     <div class="col-md-5 col-md-push-1">
                                         <div class="single_service p-r-1 wow fadeInUp">
-                                            <h2 class="m-b-2"><strong>Artist Bio</strong></h2>
-                                            <h5>
-                                                I’m Jackson Domenico, a 21-year-old senior at the University of Florida (UF) pursuing a BFA in ceramics. 
-                                                I also work with fiber art, painting, drawing, sculpture, and installation. My work explores themes like queerness, community, craft, neurodivergence, memory, and environmental ecology. 
-                                                I’m especially interested in the connection between queer people and nature, which shows up in botanical motifs and references to biological processes on micro and macro scales.</h5>
-                                                <a href="https://img1.wsimg.com/blobby/go/68190010-a76a-4ead-89b7-e623aca2cc87/%20Jackson%20Domenico%20CV%206_18.pdf" target="_blank"> <strong>Download CV</strong></a>
+                                            <h2 class="m-b-2"><strong>2021-Present</strong></h2>
+                                            <a href="https://img1.wsimg.com/blobby/go/68190010-a76a-4ead-89b7-e623aca2cc87/%20Jackson%20Domenico%20CV%206_18.pdf" target="_blank"> <strong>Download CV</strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -106,6 +92,21 @@
                     </div><!-- End of row -->
                 </div><!-- End of Container-fluid -->
             </section><!-- End of Home Section -->
+            
+
+            <div class="img-container">
+                <img class="myImg" src="assets/images/ineedpictures.png" alt="Coming Soon" style="width:100%;max-width:300px">
+                <img class="myImg" src="assets/images/bio.png" alt="Biography" style="width:100%;max-width:300px">
+            </div>
+
+            <!-- Single Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+                <div id="caption"></div>
+            </div>
+
+
 
 
         <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
