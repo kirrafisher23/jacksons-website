@@ -417,6 +417,14 @@ S
     height: 575px;
 }
 
+.mfp-title {
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
 
 /*=====================================================================
                     Contact Us Section
@@ -600,7 +608,8 @@ S
     margin: auto;
     display: block;
     width: 100%;
-    max-width: 325px;
+    height: auto;
+    max-width: 385px;
     align-items: center;
     justify-content: center;
   }
@@ -667,3 +676,4 @@ S
         margin: 0 auto; /* Center images horizontally */
     }
 }
+
