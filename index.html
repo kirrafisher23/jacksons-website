@@ -325,34 +325,31 @@
 						<input type="hidden" name="_next" value="thankyou.html">
 						<input type="hidden" name="_captcha" value="false">
                         <div class="row">
-                            <div class="col-md-12">
+                            <!-- Name Field -->
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name..." required="">
+                                    <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                                </div>
+                            </div>
+                        
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required="">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="phone" placeholder="Phone" required="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email Address" required="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
+                            <!-- Message Field -->
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="8" placeholder="Your Message"></textarea>
+                                    <textarea class="form-control" name="message" rows="8" placeholder="Message/Inquiry"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="m-b-2 m-t-2">
-                                <input type="submit" value="Send message">
+                                <input type="submit" value="Send Message">
                             </div>
                         </div>
                     </form>
