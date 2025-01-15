@@ -260,13 +260,22 @@ nav ul li {
                     home section
 ===============================================================*/
 
+
 .home {
-    background: url(../images/bio.png);
-    background-size: cover;
+    background: url(../images/quilt\ work.jpg) no-repeat center center;
+    background-size: cover; /* Ensures the image fills the area */
     position: relative;
     padding-top: 80px;
-   background-attachment: fixed;
+    padding-bottom: 80px; /* Add bottom padding for balance */
+    background-attachment: fixed;
+    min-height: 100vh; /* Makes the section at least the full viewport height */
 }
+
+.main_home h1 {
+    color: #ffffff; /* Light text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
+}
+
 
 .main_home {
     padding: 170px 20px 170px 20px;
@@ -275,8 +284,7 @@ nav ul li {
 .main_home h1{
     width:100%;
     margin:20px auto;
-    color: black;
-    text-shadow: .5px .5px pink;
+    color: white;
 }
 .main_home ul li a{
     color:#ffff;
@@ -474,6 +482,10 @@ S
     padding-left: 1px; /* Adjust spacing for the contact form */
 }
 
+.form-control{
+    color: black;
+
+}
 
 
 
