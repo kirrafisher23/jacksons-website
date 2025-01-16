@@ -40,656 +40,646 @@ Author URI: http://bootstrapthemes.co
    Author's custom styles
    ========================================================================== */
 
-html,
-body {
-    background-color: #fff;
-    font-size: 14px;
-    font-family: 'Raleway', sans-serif;
-    color: #231f20;
-    width: 100%;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 300;
-}
-
-/*==========================================
-            PREDFINEED CSS
-==========================================*/
-
-.main_figur {
-    width: 100%;
-    overflow: hidden;
-}
-.row{
-    margin-bottom:0;
-}
-img {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    user-drag: none;
-}
-
-.clear {
-    clear: both;
-}
-img {
-    max-width: 100%;
-}
-
-h1,
-h2 {
-    font-weight: 300;
-    margin: 0;
-    line-height: 2rem;
-}
-h1 {
-    font-size: 2.571rem;
-    line-height: 3.5rem;
-    color: #fff;
-}
-h2 {
-    font-size: 2.143rem;
-    line-height: 2.5rem;
-}
-h3 {
-    font-size: 1.714rem;
-    line-height: 2.5rem;
-    margin-bottom: 30px;
-}
-h4 {
-    font-size: 1.286rem;
-    line-height: 2rem;
-    font-weight: 500;
-}
-
-h6{
-    font-size:1.000rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-}
-
-p {
-    line-height: 1.375rem;
-    margin: 0 0 15px;
-}
-p:last-child {
-    margin-bottom: 0px;
-}
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    outline:0;
-}
-a:focus{
-    outline:0;
-}
-a:hover{
-    text-decoration: none;
-
-}
-
-.btn, .btn-large, .btn-flat{
-    text-transform: lowercase !important;
-}
-.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-    outline: 0;
-}
-
-.overlay{
-    position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height: 100%;
-
-}
-.form-control {
-    display: block;
-    width: 100%;
-    padding: .375rem 0rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #ddd;
-    background-color: transparent;
-    background-image: none;
-    border: 0px solid #ccc;
-    border-radius: 0rem;
-    border-bottom: 1px solid #555;
-    outline: 0;
-
-}
-
-.form-control:focus {
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075),0 0 0px rgba(102,175,233,.6);
-    box-shadow: inset 0 0px 0px rgba(0,0,0,.075),0 0 0px rgba(102,175,233,.6);
-}
-
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a;
-}
-
-textarea.form-control:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a;
-}
-
-/*section:nth-child(odd){
-    background: #ddd;
-}*/
-/*==============================================================
-            Navigation Style
-================================================================*/
-
-.cd-header a.brand-logo img{
-    width: 8%;
-    margin-left: 10%;
-    padding: 5px;
-    margin-top: 20px;
-}
-.cd-header{
-    position: fixed;
-    top: 0;
-}
-.cd-header.small{
-    background: white;
-}
-nav ul li {
-    transition: background-color .3s;
-    float: none;
-    padding: 0;
-    text-align: center;
-}
-#main-nav li {
-    height: 15%;
-}
-
-#main-nav li a {
-    position: relative;
-    display: block;
-    padding: 1.2% 10%;
-    height: 100%;
-    border-bottom: 1px solid #dfdbec;
-    color: #3a393f;
-    font-size: 20px;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-.brand-logo img{
-    width:50%;
-    margin-top: 2%;
-}
-
-/*==============================================================
-            Head Title
-================================================================*/
-.head_title {
-    width: 80%;
-    margin: 0px auto;
-}
-.head_title h2{
-    line-height: 4rem;
-    color:#231f20;
-}
-.head_title h6{
-    border-left: 2px solid #ddd;
-    padding-left: 20px; 
-}
-.head_title p{
-    padding-left: 20px; 
-}
-
-
-/*=============================================================
-                    home section
-===============================================================*/
-
-
-.home {
-    background: url(../images/quilt\ work.jpg) no-repeat center center;
-    background-size: cover; /* Ensures the image fills the area */
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px; /* Add bottom padding for balance */
-    background-attachment: fixed;
-    min-height: 100vh; /* Makes the section at least the full viewport height */
-}
-
-.main_home h1 {
-    color: #ffffff; /* Light text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
-}
-
-
-.main_home {
-    padding: 170px 20px 170px 20px;
-    position: relative;
-}
-.main_home h1{
-    width:100%;
-    margin:20px auto;
-    color: white;
-}
-.main_home ul li a{
-    color:#ffff;
-}
-.main_home ul{
-    margin-top:10%;
-}
-
-.scrolldown{
-    position: absolute;
-    left: 50%;
-    bottom: 8%;
-    margin-left:-17px;
-}
-.scrolldown a i{
-    width: 35px;
-    height: 35px;
-    border: 2px solid black;
-    line-height: 30px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -webkit-transition: all 500ms ease-in-out 0s;
-    -moz-transition: all 500ms ease-in-out 0s;
-    -ms-transition: all 500ms ease-in-out 0s;
-    transition: all 500ms ease-in-out 0s;
-    text-align: center;
-    color:black;
-    margin:0 auto;
-
-}
-.scrolldown a:hover i{
-    opacity: .85;
-    -moz-opacity: .85;
-    -o-opacity: .85;
-    -webkit-opacity: .85;
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-
-}
-
-S
-
-/*=================================================================
-                    Service Section
-===================================================================*/
-
-.service .container-fluid{
-    padding-right: 0px; 
-    padding-left: 0px; 
-    margin-right: auto; 
-    margin-left: auto; 
-}
-.main_service_content .col-sm-push-6 {
-    left: 52%;
-}
-.main_service_content{
-    overflow: hidden;
-}
-.main_service_content .single_service_area{
-    overflow: hidden;
-}
-.main_service_content img{
-    width:100%;
-}
-.main_service_content .single_service{
-    margin-top:25%;
-}
-.main_service_content .single_service h2{
-    font-weight: 700;
-    color: #231f20;
-}
-.single_service.single_service_left_text{
-    margin-left:15%;
-}
-
-.single_service_area a{
-    color: black;
-}
-
-
-
-/*=====================================================================
-                    portfolio section 
-====================================================================*/
-
-.main_portfolio_content{
-    display: inline-block
-}
-.main_portfolio_content .single_portfolio{
-    position: relative;
-    margin-bottom: 18px;
-}
-.main_portfolio_content .single_portfolio img{
-    width:100%;
-}
-.main_portfolio_content .single_portfolio:hover .single_portfolio_overlay{
-    opacity: 1;
-}
-.single_portfolio_overlay{
-    position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height: 100%;
-    background: rgba(221, 221, 221, 0.60);
-    opacity: 0;
-    transition: all 0.3s;
-
-}
-.single_portfolio_overlay .icon_area{
-    position: absolute;
-    top:45%;
-    width:100%;
-    height: 100%;
-}
-.single_portfolio_overlay .icon_area img{
-    width:27px;
-    height:25px;
-}
-.single_portfolio_overlay .icon_area img{
-    width:27px;
-    height:25px;
-}
-.single_portfolio.height_1 .icon_area img{
-    width:27px;
-    height:25px;
-}
-.single_portfolio img{
-    width:100%;
-    height: 280px; 
-
-}
-.single_portfolio.height_1 img{
-    width:100%;
-    height: 575px;
-}
-
-.mfp-title {
-    color: white;
-    font-family: sans-serif;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-
-/*=====================================================================
-                    Contact Us Section
-====================================================================*/
-
-
-.ourmap{
-    height: 648px;
-    width:100%;
-}
-
-.main_contact_area{
-    background: white;
-}
-.main_contact_area .head_title{
-    width:100%;
-}
-.main_contact_area .head_title h2{
-    color:black;
-}
-.main_contactus_area input[type=submit] {
-    -webkit-appearance: button;
-    cursor: pointer;
-    width: 20%;
-    background: white;
-    border:1px solid #555;
-    border-radius: 30px;
-    height: 36px;
-    font-size: 0.875rem;
-    transition: all 0.6s;
-    color:black;
-}
-.main_contactus_area input[type=submit]:hover {
-    background: #000;
-    color:#fff;
-    border-color:#fff;
-}
-.main_contactus_area input[type=submit]:focus {
-    outline:0;
-}
-
-.contact_us_right {
-    padding-right: 15px; /* Reduce padding on the right */
-}
-
-.main_contact_area {
-    padding-left: 1px; /* Adjust spacing for the contact form */
-}
-
-.form-control{
-    color: black;
-
-}
-
-
-
-/*=====================================================================
-                   Footer Section
-====================================================================*/
-.footer{
-    background: #1c1c1c;
-}
-.main_footer{
-    overflow: hidden;
-    display: inline-block;
-    width:100%;
-    padding: 40px 0px;
-    border-top: 1px solid #555;
-    margin-top: 40px;
-}
-.main_footer .footer_logo a {
-    font-family: 'Anton', sans-serif; /* Keep the current font style */
-    font-size: 1.5rem; /* Adjust as needed */
-    color: black; /* Or the desired color */
-}
-.main_footer .copyright_text p{
-    line-height: 2rem;
-    color:#a0a0a0;
-}
-.main_footer .copyright_text a{
-    padding: 0px 5px;
-    color:#fff;
-}
-.main_footer .copyright_text i{
-    padding: 0px 5px;
-    color:#ff0000;
-}
-
-.scrollup a i{
-    background: #555;
-    color:#ddd;
-    border-radius: 50%;
-    width:30px;
-    height: 30px;
-    line-height: 30px;
-    transition: all 0.6s;
-}
-.scrollup a:hover i{
-    background: #fff;
-    color:#333; 
-}
-
-/*=====================================================================
-                    scrollup 
-====================================================================*/
-
-/*.scrollup{
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    opacity: .3;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    color: #fff;
-    cursor: pointer;
-    background-color: #000;
-    z-index: 1000;
-    transition: opacity .5s, background-color .5s;
-    -moz-transition: opacity .5s, background-color .5s;
-    -webkit-transition: opacity .5s, background-color .5s;
-}
-
-.scrollup:hover {
-    background: #fff;
-    opacity: 1;
-}
-
-.scrollup i {
-    font-size: 13px;
-    position: absolute;
-    opacity: 1;
-    color: #333;
-    left: 0%;
-    top: 50%;
-    margin-top: -7px;
-    margin-left: -6px;
-    text-decoration: none;
-
-}*/
-
-/*=================================================================
-                    Modal For Artwork Page
-===================================================================*/
-/* Style the Image Used to Trigger the Modal */
-
-/* Container for images */
-.img-container {
-    display: flex; /* Makes child elements (images) align horizontally */
-    justify-content: center; /* Centers images horizontally within the container */
-    align-items: flex-start; /* Aligns images to the top */
-    gap: 20px; /* Adds space between the images */
-    padding: 20px; /* Optional: Adds padding around the container */
-}
-
-/* Individual images */
-#myImg {
-    display: block;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#myImg:hover {
-    opacity: 0.7;
-}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (Image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 385px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: white;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-  }
-
-  /* Media query for smaller screens */
-@media only screen and (max-width: 700px) {
-    .img-container {
-        flex-wrap: wrap; /* Stack images vertically */
-        gap: 10px; /* Reduce space between images */
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    #myImg {
-        max-width: 90%; /* Make images responsive */
-        height: auto; /* Maintain aspect ratio */
-        margin: 0 auto; /* Center images horizontally */
-    }
-}
-
-/*font awesome stuff*/
+   html,
+   body {
+       background-color: #fff;
+       font-size: 14px;
+       font-family: 'Raleway', sans-serif;
+       color: #231f20;
+       width: 100%;
+       padding: 0;
+       margin-left: 0;
+       margin-right: 0;
+       font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+       -webkit-font-smoothing: antialiased;
+       font-weight: 300;
+   }
+   
+   /*==========================================
+               PREDFINEED CSS
+   ==========================================*/
+   
+   .main_figur {
+       width: 100%;
+       overflow: hidden;
+   }
+   .row{
+       margin-bottom:0;
+   }
+   img {
+       -moz-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+       -webkit-user-drag: none;
+       user-drag: none;
+   }
+   
+   .clear {
+       clear: both;
+   }
+   img {
+       max-width: 100%;
+   }
+   
+   h1,
+   h2 {
+       font-weight: 300;
+       margin: 0;
+       line-height: 2rem;
+   }
+   h1 {
+       font-size: 2.571rem;
+       line-height: 3.5rem;
+       color: #fff;
+   }
+   h2 {
+       font-size: 2.143rem;
+       line-height: 2.5rem;
+   }
+   h3 {
+       font-size: 1.714rem;
+       line-height: 2.5rem;
+       margin-bottom: 30px;
+   }
+   h4 {
+       font-size: 1.286rem;
+       line-height: 2rem;
+       font-weight: 500;
+   }
+   
+   h6{
+       font-size:1.000rem;
+       font-weight: 500;
+       line-height: 1.5rem;
+   }
+   
+   p {
+       line-height: 1.375rem;
+       margin: 0 0 15px;
+   }
+   p:last-child {
+       margin-bottom: 0px;
+   }
+   ul {
+       margin: 0;
+       padding: 0;
+       list-style: none;
+   }
+   a{
+       text-decoration: none;
+       outline:0;
+   }
+   a:focus{
+       outline:0;
+   }
+   a:hover{
+       text-decoration: none;
+   
+   }
+   
+   .btn, .btn-large, .btn-flat{
+       text-transform: lowercase !important;
+   }
+   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+       outline: thin dotted;
+       outline: 5px auto -webkit-focus-ring-color;
+       outline-offset: -2px;
+       outline: 0;
+   }
+   
+   .overlay{
+       position: absolute;
+       left:0;
+       top:0;
+       width:100%;
+       height: 100%;
+   
+   }
+   .form-control {
+       display: block;
+       width: 100%;
+       padding: .375rem 0rem;
+       font-size: 1rem;
+       line-height: 1.5;
+       color: #ddd;
+       background-color: transparent;
+       background-image: none;
+       border: 0px solid #ccc;
+       border-radius: 0rem;
+       border-bottom: 1px solid #555;
+       outline: 0;
+   
+   }
+   
+   .form-control:focus {
+       border-color: #66afe9;
+       outline: 0;
+       -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075),0 0 0px rgba(102,175,233,.6);
+       box-shadow: inset 0 0px 0px rgba(0,0,0,.075),0 0 0px rgba(102,175,233,.6);
+   }
+   
+   input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+       border-bottom: 1px solid #26a69a;
+       box-shadow: 0 1px 0 0 #26a69a;
+   }
+   
+   textarea.form-control:focus:not([readonly]) {
+       border-bottom: 1px solid #26a69a;
+       box-shadow: 0 1px 0 0 #26a69a;
+   }
+   
+   /*section:nth-child(odd){
+       background: #ddd;
+   }*/
+   /*==============================================================
+               Navigation Style
+   ================================================================*/
+   
+   .cd-header a.brand-logo img{
+       width: 8%;
+       margin-left: 10%;
+       padding: 5px;
+       margin-top: 20px;
+   }
+   .cd-header{
+       position: fixed;
+       top: 0;
+   }
+   .cd-header.small{
+       background: white;
+   }
+   nav ul li {
+       transition: background-color .3s;
+       float: none;
+       padding: 0;
+       text-align: center;
+   }
+   #main-nav li {
+       height: 15%;
+   }
+   
+   #main-nav li a {
+       position: relative;
+       display: block;
+       padding: 1.2% 10%;
+       height: 100%;
+       border-bottom: 1px solid #dfdbec;
+       color: #3a393f;
+       font-size: 20px;
+       font-size: 1.25rem;
+       font-weight: bold;
+   }
+   .brand-logo img{
+       width:50%;
+       margin-top: 2%;
+   }
+   
+   /*==============================================================
+               Head Title
+   ================================================================*/
+   .head_title {
+       width: 80%;
+       margin: 0px auto;
+   }
+   .head_title h2{
+       line-height: 4rem;
+       color:#231f20;
+   }
+   .head_title h6{
+       border-left: 2px solid #ddd;
+       padding-left: 20px; 
+   }
+   .head_title p{
+       padding-left: 20px; 
+   }
+   
+   
+   /*=============================================================
+                       home section
+   ===============================================================*/
+   
+   .home {
+       background: url(../images/quilt\ work.jpg);
+       background-size: cover;
+       position: relative;
+       padding-top: 80px;
+      background-attachment: fixed;
+   }
+   
+   .main_home {
+       padding: 170px 20px 170px 20px;
+       position: relative;
+   }
+   .main_home h1{
+       width:100%;
+       margin:20px auto;
+       color: white;
+       text-shadow: .5px .5px black;
+   }
+   .main_home ul li a{
+       color:#ffff;
+   }
+   .main_home ul{
+       margin-top:10%;
+   }
+   
+   .scrolldown{
+       position: absolute;
+       left: 50%;
+       bottom: 8%;
+       margin-left:-17px;
+   }
+   .scrolldown a i{
+       width: 35px;
+       height: 35px;
+       border: 2px solid black;
+       line-height: 30px;
+       border-radius: 50%;
+       -moz-border-radius: 50%;
+       -webkit-border-radius: 50%;
+       -webkit-transition: all 500ms ease-in-out 0s;
+       -moz-transition: all 500ms ease-in-out 0s;
+       -ms-transition: all 500ms ease-in-out 0s;
+       transition: all 500ms ease-in-out 0s;
+       text-align: center;
+       color:black;
+       margin:0 auto;
+   
+   }
+   .scrolldown a:hover i{
+       opacity: .85;
+       -moz-opacity: .85;
+       -o-opacity: .85;
+       -webkit-opacity: .85;
+       transform: scale(1.2);
+       -webkit-transform: scale(1.2);
+       -moz-transform: scale(1.2);
+       -o-transform: scale(1.2);
+   
+   }
+   
+   S
+   
+   /*=================================================================
+                       Service Section
+   ===================================================================*/
+   
+   .service .container-fluid{
+       padding-right: 0px; 
+       padding-left: 0px; 
+       margin-right: auto; 
+       margin-left: auto; 
+   }
+   .main_service_content .col-sm-push-6 {
+       left: 52%;
+   }
+   .main_service_content{
+       overflow: hidden;
+   }
+   .main_service_content .single_service_area{
+       overflow: hidden;
+   }
+   .main_service_content img{
+       width:100%;
+   }
+   .main_service_content .single_service{
+       margin-top:25%;
+   }
+   .main_service_content .single_service h2{
+       font-weight: 700;
+       color: #231f20;
+   }
+   .single_service.single_service_left_text{
+       margin-left:15%;
+   }
+   
+   .single_service_area a{
+       color: black;
+   }
+   
+   
+   
+   /*=====================================================================
+                       portfolio section 
+   ====================================================================*/
+   
+   .main_portfolio_content{
+       display: inline-block
+   }
+   .main_portfolio_content .single_portfolio{
+       position: relative;
+       margin-bottom: 18px;
+   }
+   .main_portfolio_content .single_portfolio img{
+       width:100%;
+   }
+   .main_portfolio_content .single_portfolio:hover .single_portfolio_overlay{
+       opacity: 1;
+   }
+   .single_portfolio_overlay{
+       position: absolute;
+       left:0;
+       top:0;
+       width:100%;
+       height: 100%;
+       background: rgba(221, 221, 221, 0.60);
+       opacity: 0;
+       transition: all 0.3s;
+   
+   }
+   .single_portfolio_overlay .icon_area{
+       position: absolute;
+       top:45%;
+       width:100%;
+       height: 100%;
+   }
+   .single_portfolio_overlay .icon_area img{
+       width:27px;
+       height:25px;
+   }
+   .single_portfolio_overlay .icon_area img{
+       width:27px;
+       height:25px;
+   }
+   .single_portfolio.height_1 .icon_area img{
+       width:27px;
+       height:25px;
+   }
+   .single_portfolio img{
+       width:100%;
+       height: 280px; 
+   
+   }
+   .single_portfolio.height_1 img{
+       width:100%;
+       height: 575px;
+   }
+   
+   .mfp-title {
+       color: white;
+       font-family: sans-serif;
+       font-size: 14px;
+       text-align: center;
+       margin-top: 10px;
+   }
+   
+   
+   /*=====================================================================
+                       Contact Us Section
+   ====================================================================*/
+   
+   
+   .ourmap{
+       height: 648px;
+       width:100%;
+   }
+   
+   .main_contact_area{
+       background: white;
+   }
+   .main_contact_area .head_title{
+       width:100%;
+   }
+   .main_contact_area .head_title h2{
+       color:black;
+       
+   }
+   .main_contactus_area input[type=submit] {
+       -webkit-appearance: button;
+       cursor: pointer;
+       width: 20%;
+       background: white;
+       border:1px solid #555;
+       border-radius: 30px;
+       height: 36px;
+       font-size: 0.875rem;
+       transition: all 0.6s;
+       color:black;
+   }
+   .main_contactus_area input[type=submit]:hover {
+       background: #000;
+       color:#fff;
+       border-color:#fff;
+   }
+   .main_contactus_area input[type=submit]:focus {
+       outline:0;
+   }
+   
+   .contact_us_right {
+       padding-right: 15px; /* Reduce padding on the right */
+   }
+   
+   .main_contact_area {
+       padding-left: 1px; /* Adjust spacing for the contact form */
+   }
+   
+   
+   
+   
+   /*=====================================================================
+                      Footer Section
+   ====================================================================*/
+   .footer{
+       background: #1c1c1c;
+   }
+   .main_footer{
+       overflow: hidden;
+       display: inline-block;
+       width:100%;
+       padding: 40px 0px;
+       border-top: 1px solid #555;
+       margin-top: 40px;
+   }
+   .main_footer .footer_logo a {
+       font-family: 'Anton', sans-serif; /* Keep the current font style */
+       font-size: 1.5rem; /* Adjust as needed */
+       color: black; /* Or the desired color */
+       text-shadow: 1px 1px 2px rgb(255, 188, 199);
+   }
+   .main_footer .copyright_text p{
+       line-height: 2rem;
+       color:#a0a0a0;
+   }
+   .main_footer .copyright_text a{
+       padding: 0px 5px;
+       color:#fff;
+   }
+   .main_footer .copyright_text i{
+       padding: 0px 5px;
+       color:#ff0000;
+   }
+   
+   .scrollup a i{
+       background: #555;
+       color:#ddd;
+       border-radius: 50%;
+       width:30px;
+       height: 30px;
+       line-height: 30px;
+       transition: all 0.6s;
+   }
+   .scrollup a:hover i{
+       background: #fff;
+       color:#333; 
+   }
+   
+   /*=====================================================================
+                       scrollup 
+   ====================================================================*/
+   
+   /*.scrollup{
+       width: 30px;
+       height: 30px;
+       border-radius: 15px;
+       opacity: .3;
+       position: fixed;
+       bottom: 0px;
+       left: 0px;
+       color: #fff;
+       cursor: pointer;
+       background-color: #000;
+       z-index: 1000;
+       transition: opacity .5s, background-color .5s;
+       -moz-transition: opacity .5s, background-color .5s;
+       -webkit-transition: opacity .5s, background-color .5s;
+   }
+   
+   .scrollup:hover {
+       background: #fff;
+       opacity: 1;
+   }
+   
+   .scrollup i {
+       font-size: 13px;
+       position: absolute;
+       opacity: 1;
+       color: #333;
+       left: 0%;
+       top: 50%;
+       margin-top: -7px;
+       margin-left: -6px;
+       text-decoration: none;
+   
+   }*/
+   
+   /*=================================================================
+                       Modal For Artwork Page
+   ===================================================================*/
+   /* Style the Image Used to Trigger the Modal */
+   
+   /* Container for images */
+   .img-container {
+       display: flex; /* Makes child elements (images) align horizontally */
+       justify-content: center; /* Centers images horizontally within the container */
+       align-items: flex-start; /* Aligns images to the top */
+       gap: 20px; /* Adds space between the images */
+       padding: 20px; /* Optional: Adds padding around the container */
+   }
+   
+   /* Individual images */
+   #myImg {
+       display: block;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: 0.3s;
+   }
+   
+   #myImg:hover {
+       opacity: 0.7;
+   }
+     
+     /* The Modal (background) */
+     .modal {
+       display: none; /* Hidden by default */
+       position: fixed; /* Stay in place */
+       z-index: 1; /* Sit on top */
+       padding-top: 100px; /* Location of the box */
+       left: 0;
+       top: 0;
+       width: 100%; /* Full width */
+       height: 100%; /* Full height */
+       overflow: auto; /* Enable scroll if needed */
+       background-color: rgb(0,0,0); /* Fallback color */
+       background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+     }
+     
+     /* Modal Content (Image) */
+     .modal-content {
+       margin: auto;
+       display: block;
+       width: 100%;
+       height: auto;
+       max-width: 385px;
+       align-items: center;
+       justify-content: center;
+     }
+     
+     /* Caption of Modal Image (Image Text) - Same Width as the Image */
+     #caption {
+       margin: auto;
+       display: block;
+       width: 80%;
+       max-width: 700px;
+       text-align: center;
+       color: white;
+       padding: 10px 0;
+       height: 150px;
+     }
+     
+     /* Add Animation - Zoom in the Modal */
+     .modal-content, #caption {
+       animation-name: zoom;
+       animation-duration: 0.6s;
+     }
+     
+     @keyframes zoom {
+       from {transform:scale(0)}
+       to {transform:scale(1)}
+     }
+     
+     /* The Close Button */
+     .close {
+       position: absolute;
+       top: 15px;
+       right: 35px;
+       color: white;
+       font-size: 40px;
+       font-weight: bold;
+       transition: 0.3s;
+     }
+     
+     .close:hover,
+     .close:focus {
+       color: white;
+       text-decoration: none;
+       cursor: pointer;
+     }
+     
+     /* 100% Image Width on Smaller Screens */
+     @media only screen and (max-width: 700px){
+       .modal-content {
+         width: 100%;
+       }
+     }
+   
+     /* Media query for smaller screens */
+   @media only screen and (max-width: 700px) {
+       .img-container {
+           flex-wrap: wrap; /* Stack images vertically */
+           gap: 10px; /* Reduce space between images */
+           padding: 10px; /* Adjust padding for smaller screens */
+       }
+   
+       #myImg {
+           max-width: 90%; /* Make images responsive */
+           height: auto; /* Maintain aspect ratio */
+           margin: 0 auto; /* Center images horizontally */
+       }
+   }
+
+   /*font awesome stuff*/
 
 .icon {
     text-decoration: none;
@@ -744,21 +734,21 @@ S
         }
 
         .icon.circle.fa-instagram {
-            background: #da83ae;
+            background: PINK;
             color: #fff;
         }
 
             .icon.circle.fa-instagram:hover {
-                background: #df93b8;
+                background: PINK;
             }
     
-        .icon.circle.fa-google {
-                background: #8ada83;
+        .icon.circle.fa-envelope {
+                background: #28d418;
                 color: #fff;
             }
 
-            .icon.circle.fa-google:hover {
-                    background: #8ada83;
+            .icon.circle.fa-envelope:hover {
+                    background: #28d418;
             }
 
 
@@ -849,50 +839,95 @@ S
 				width: 1em;
 			}
 
+            .icon:before {
+                font-family: 'Font Awesome 5 Free'; /* For solid and regular icons */
+                font-weight: 400;
+            }
+            
+            .icon.brands:before {
+                font-family: 'Font Awesome 5 Brands'; /* For brand icons like Instagram, Google */
+            }
+            
+
+
+
+/* Artwork Footer Styling */
+#artwork-footer {
+    background-color: #ffffff; /* Set pure white background */
+    border-top: 1px solid black; /* Single black line */
+    padding: 100px;
+    margin: 0; /* Remove extra spacing */
+}
+
+/* Footer Content Centering */
+#artwork-footer .socialsart {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between social links */
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Remove Two-Tone Background */
+#artwork-footer .main_footer {
+    background-color: #ffffff; /* Pure white background for consistency */
+    margin: 0;
+    border: none; /* Remove extra borders */
+}
+
+
+#artwork-footer .socialsart a {
+    font-family: 'Anton', sans-serif; /* Keep the current font style */
+    font-size: 1.5rem; /* Adjust as needed */
+    color: black; /* Or the desired color */
+    text-shadow: 1px 1px 2px rgb(255, 188, 199);
+}
+
+
 
 /*thank you!!*/
-            .thankyou {
-                background: url(../images/backdropASF.png);
-                background-size: cover;
-                position: relative;
-               background-attachment: fixed;
-            }
-            
-            .main_thankyou {
-                padding: 170px 20px 170px 20px;
-                position: relative;
-            }
-            .main_thankyou h1{
-                width:100%;
-                margin:20px auto;
-                color: black;
-                text-shadow: .5px .5px pink;
-            }
-            .main_thankyou ul li a{
-                color:#ffff;
-            }
-            .main_thankyou ul{
-                margin-top:10%;
-            }
-            
+.thankyou {
+    background: url(../images/quilt\ work.jpg);
+    background-size: cover;
+    position: relative;
+   background-attachment: fixed;
+}
+
+.main_thankyou {
+    padding: 170px 20px 170px 20px;
+    position: relative;
+}
+.main_thankyou h1{
+    width:100%;
+    margin:20px auto;
+    color: black;
+    text-shadow: .5px .5px pink;
+}
+.main_thankyou ul li a{
+    color:#ffff;
+}
+.main_thankyou ul{
+    margin-top:10%;
+}
+
 /*button asf*/
 .button {
-    background-color: pink;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 10%;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button:hover {opacity: 1}
+background-color: pink;
+border: none;
+color: white;
+padding: 16px 32px;
+text-align: center;
+font-size: 16px;
+margin: 4px 2px;
+opacity: 0.6;
+transition: 0.3s;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+border-radius: 10%;
+justify-content: center;
+align-items: center;
+}
 
+.button:hover {opacity: 1}

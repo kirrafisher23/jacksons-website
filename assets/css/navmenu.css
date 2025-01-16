@@ -129,6 +129,7 @@ Main components
     font-family: 'Anton';
     font-size: 22px;
     color: black;
+    text-shadow: 1px 1px 2px rgb(255, 188, 199);
 }
 
 #cd-logo {
@@ -174,7 +175,7 @@ Main components
     display: inline-block;
     width: 18px;
     height: 2px;
-    background-color: black;
+    background-color: rgb(255, 188, 199);
     vertical-align: middle;
     -webkit-transform: translateY(-2px);
     -moz-transform: translateY(-2px);
