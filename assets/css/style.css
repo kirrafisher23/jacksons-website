@@ -328,10 +328,10 @@ Author URI: http://bootstrapthemes.co
         background-attachment: scroll; /* Prevent fixed background issues */
     }
     .main_home {
-        padding: 100px 15px 100px 15px; /* Reduce padding for mobile */
+        padding: 150px 20px 120px 20px; /* Reduce padding for mobile */
     }
     .main_home h1 {
-        font-size: 1.5rem; /* Scale text size */
+        font-size: 2.5rem; /* Scale text size */
         text-align: center;
     }
 }
@@ -491,7 +491,11 @@ Author URI: http://bootstrapthemes.co
        padding-left: 1px; /* Adjust spacing for the contact form */
    }
    
-   
+ 
+.form-control{
+    color: black;
+
+}
    
    
    /*=====================================================================
@@ -869,81 +873,73 @@ Author URI: http://bootstrapthemes.co
 
 /* Artwork Footer Styling */
 #artwork-footer {
-    background-color: #ffffff; /* Set pure white background */
-    border-top: 1px solid black; /* Single black line */
+    background-color: #ffffff;
+    border-top: 1px solid black;
     padding: 100px;
-    margin: 0; /* Remove extra spacing */
+    margin-top: 200px; /* Add this line to push the footer down */
+    margin-bottom: 0;
 }
 
-/* Footer Content Centering */
+/* Rest of your existing footer styles remain the same */
 #artwork-footer .socialsart {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    gap: 15px; /* Space between social links */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     text-align: center;
     margin: 0 auto;
 }
 
-/* Remove Two-Tone Background */
 #artwork-footer .main_footer {
-    background-color: #ffffff; /* Pure white background for consistency */
+    background-color: #ffffff;
     margin: 0;
-    border: none; /* Remove extra borders */
+    border: none;
 }
 
-
 #artwork-footer .socialsart a {
-    font-family: 'Anton', sans-serif; /* Keep the current font style */
-    font-size: 1.5rem; /* Adjust as needed */
-    color: black; /* Or the desired color */
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    color: black;
     text-shadow: 1px 1px 2px rgb(255, 188, 199);
 }
 
 
 
-/*thank you!!*/
 .thankyou {
     background: url(../images/quilt\ work.jpg);
     background-size: cover;
-    position: relative;
-   background-attachment: fixed;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
 }
 
-.main_thankyou {
-    padding: 170px 20px 170px 20px;
-    position: relative;
-}
-.main_thankyou h1{
-    width:100%;
-    margin:20px auto;
-    color: black;
-    text-shadow: .5px .5px pink;
-}
-.main_thankyou ul li a{
-    color:#ffff;
-}
-.main_thankyou ul{
-    margin-top:10%;
+.thankyou h1 {
+    color: white;
+    text-shadow: 0.5px 0.5px black;
+    text-align: center;
+    margin-bottom: 20px; /* Add some spacing below the text */
 }
 
-/*button asf*/
-.button {
-background-color: pink;
-border: none;
-color: white;
-padding: 16px 32px;
-text-align: center;
-font-size: 16px;
-margin: 4px 2px;
-opacity: 0.6;
-transition: 0.3s;
-display: inline-block;
-text-decoration: none;
-cursor: pointer;
-border-radius: 10%;
-justify-content: center;
-align-items: center;
+/* Button styling */
+button {
+    font-family: 'Anton', sans-serif;
+    background-color: pink;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    transition: 0.3s;
+    display: inline-block; /* Adjusted for centering */
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 2%;
 }
 
-.button:hover {opacity: 1}
+button:hover {
+    opacity: 0.8;
+}
