@@ -324,29 +324,28 @@
                 </div>
                 <div class="single_contant_right">
                     <form action="https://formsubmit.co/kirrafisher23@gmail.com" method="POST">
-						<!-- Required Hidden Field for FormSubmit -->
-						<input type="hidden" name="_next" value="thankyou.html">
-						<input type="hidden" name="_captcha" value="false">
+                        <!-- Hidden Fields for Functionality -->
+                        <input type="hidden" name="_next" value="thankyou.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_subject" value="New Inquiry from Contact Form">
+                        
                         <div class="row">
-                            <!-- Name Field -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                                    <input type="text" class="form-control" name="name" placeholder="Name" required>
                                 </div>
                             </div>
-                        
-                            <!-- Email Field -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <!-- Message Field -->
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="8" placeholder="Message/Inquiry"></textarea>
+                                    <textarea class="form-control" name="message" rows="8" placeholder="Message/Inquiry" required></textarea>
                                 </div>
                             </div>
                         </div>
