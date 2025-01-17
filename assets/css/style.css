@@ -324,7 +324,7 @@ Author URI: http://bootstrapthemes.co
    /* Media Queries for Mobile Fix */
 @media screen and (max-width: 768px) {
     .home {
-        background-size: contain; /* Adjust background for mobile */
+        background-size: contain no-repeat; /* Adjust background for mobile */
         background-attachment: scroll; /* Prevent fixed background issues */
     }
     .main_home {
