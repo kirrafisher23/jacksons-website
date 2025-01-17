@@ -319,6 +319,22 @@ Author URI: http://bootstrapthemes.co
        -o-transform: scale(1.2);
    
    }
+
+
+   /* Media Queries for Mobile Fix */
+@media screen and (max-width: 768px) {
+    .home {
+        background-size: contain; /* Adjust background for mobile */
+        background-attachment: scroll; /* Prevent fixed background issues */
+    }
+    .main_home {
+        padding: 100px 15px 100px 15px; /* Reduce padding for mobile */
+    }
+    .main_home h1 {
+        font-size: 1.5rem; /* Scale text size */
+        text-align: center;
+    }
+}
    
    S
    
