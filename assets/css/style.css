@@ -583,131 +583,107 @@ Author URI: http://bootstrapthemes.co
        text-decoration: none;
    
    }*/
-   
-   /*=================================================================
-                       Modal For Artwork Page
-   ===================================================================*/
-   /* Style the Image Used to Trigger the Modal */
-   
-   /* Container for images */
-/* ==========================
-   General Image Container Styling
-   ========================== */
-   .img-container1,
-   .img-container2 {
-       display: flex; /* Aligns images in a row */
-       flex-wrap: wrap; /* Allows wrapping on smaller screens */
-       justify-content: center; /* Centers images */
-       align-items: flex-start;
-       gap: 20px; /* Space between images */
-       padding: 20px;
-   }
-   
-   /* ==========================
-      Individual Image Styling
-      ========================== */
-   .myImg {
-       display: block;
-       max-width: 300px;
-       width: 100%;
-       height: auto;
-       border-radius: 5px;
-       cursor: pointer;
-       transition: opacity 0.3s ease-in-out;
-   }
-   
-   .myImg:hover {
-       opacity: 0.7;
-   }
-   
-   /* ==========================
-      Mobile Layout Fix
-      ========================== */
-   @media only screen and (max-width: 768px) {
-       .img-container1,
-       .img-container2 {
-           flex-direction: column; /* Stack images vertically */
-           align-items: center; /* Center images */
-           gap: 10px; /* Reduce space */
-           padding: 10px;
-       }
-   
-       .myImg {
-           max-width: 90%; /* Ensure images don't shrink too much */
-           margin: 0 auto; /* Center them horizontally */
-       }
-   }
-   
-     
-     /* The Modal (background) */
-     .modal {
-       display: none; /* Hidden by default */
-       z-index: 1; /* Sit on top */
-       padding-top: 100px; /* Location of the box */
-       left: 0;
-       top: 0;
-       width: 100%; /* Full width */
-       height: 100%; /* Full height */
-       overflow: auto; /* Enable scroll if needed */
-       background-color: rgb(0,0,0); /* Fallback color */
-       background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-     }
-     
-     /* Modal Content (Image) */
-     .modal-content {
-       margin: auto;
-       display: block;
-       width: 100%;
-       height: auto;
-       max-width: 385px;
-       align-items: center;
-       justify-content: center;
-     }
-     
-     /* Caption of Modal Image (Image Text) - Same Width as the Image */
-     #caption {
-       margin: auto;
-       display: block;
-       width: 80%;
-       max-width: 700px;
-       text-align: center;
-       color: white;
-       padding: 10px 0;
-       height: 150px;
-     }
-     
-     /* Add Animation - Zoom in the Modal */
-     .modal-content, #caption {
-       animation-name: zoom;
-       animation-duration: 0.6s;
-     }
-     
-     @keyframes zoom {
-       from {transform:scale(0)}
-       to {transform:scale(1)}
-     }
-     
-     /* The Close Button */
-     .close {
-       position: absolute;
-       top: 15px;
-       right: 35px;
-       color: white;
-       font-size: 40px;
-       font-weight: bold;
-       transition: 0.3s;
-     }
-     
-     .close:hover,
-     .close:focus {
-       color: white;
-       text-decoration: none;
-       cursor: pointer;
-     }
-     
 
 
+   /* light box for artwork page*/
+   
+   .img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-img:hover {
+    opacity: 0.7;
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+#caption {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+@media (max-width: 768px) {
+    .img-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-img {
+        max-width: 90%;
+    }
+
+    .lightbox-content {
+        max-width: 95%;
+    }
+    
+    .prev, .next {
+        font-size: 30px;
+    }
+}
+     
 
 /*font awesome stuff*/
 
