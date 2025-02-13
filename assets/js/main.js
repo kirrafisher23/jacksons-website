@@ -138,32 +138,38 @@ function initializeMultiPageNav() {
     });
 }
 
-// Get the modal elements
-const modal = document.getElementById("myModal");
-const modalImg = document.getElementById("modalImg");
-const captionText = document.getElementById("caption");
-const closeModal = document.querySelector(".close");
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".gallery-img");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const captionText = document.getElementById("caption");
+        const closeBtn = document.querySelector(".close");
 
-// Add click event to all images with the class "myImg"
-document.querySelectorAll(".myImg").forEach((img) => {
-    img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src; // Set the modal image source
-        captionText.innerHTML = this.alt; // Set the modal caption
-    };
-});
+        images.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                lightbox.style.display = "flex";
+                lightboxImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                currentIndex = index;
+            });
+        });
 
-// Close modal when clicking the "close" button
-closeModal.onclick = function () {
-    modal.style.display = "none";
-};
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            lightboxImg.src = images[currentIndex].src;
+            captionText.innerHTML = images[currentIndex].alt;
+        }
 
-// Close modal when clicking outside of the modal image
-modal.onclick = function (e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-};
+        closeBtn.onclick = function() {
+            lightbox.style.display = "none";
+        };
 
+        lightbox.onclick = function(event) {
+            if (event.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        };
 
 
