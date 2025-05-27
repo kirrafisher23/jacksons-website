@@ -55,6 +55,58 @@ Main components
 }
 
 
+.cd-header {
+    display: flex; /* Enable flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Push text and icon to opposite sides */
+    height: 50px; /* Adjust as per your design */
+    padding: 0 20px; /* Add some padding to the sides */
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+.brand-logo {
+    font-family: 'Anton', sans-serif; /* Keep the current font style */
+    font-size: 1.5rem; /* Adjust as needed */
+    color: white; /* Or the desired color */
+    text-decoration: none; /* Remove underline */
+    margin: 0; /* Reset margin */
+}
+
+.cd-menu-trigger {
+    display: flex; /* Ensure alignment for the icon */
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+
+.cd-menu-trigger span {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background-color: white; /* Keep the hamburger icon visible */
+}
+
+.cd-menu-trigger span::before,
+.cd-menu-trigger span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.cd-menu-trigger span::before {
+    top: -6px;
+}
+
+.cd-menu-trigger span::after {
+    bottom: -6px;
+}
+
+
 
 .cd-header {
     position: absolute;
@@ -71,6 +123,13 @@ Main components
     .cd-header {
         height: 80px;
     }
+}
+
+.cd-header a{
+    font-family: 'Anton';
+    font-size: 22px;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(255, 188, 199);
 }
 
 #cd-logo {
@@ -116,7 +175,7 @@ Main components
     display: inline-block;
     width: 18px;
     height: 2px;
-    background-color: white;
+    background-color: rgb(255, 188, 199);
     vertical-align: middle;
     -webkit-transform: translateY(-2px);
     -moz-transform: translateY(-2px);
@@ -187,23 +246,33 @@ Main components
     z-index: 3;
 }
 #main-nav ul {
-    height: 100%;
-    overflow-y: scroll;
+    height: 100%; /* Full height for the menu */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-evenly; /* Space items evenly */
+    padding: 0;
+    margin: 0;
 }
+
 #main-nav li {
-    height: 20%;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 20%; /* Ensure consistent height across items */
 }
+
 #main-nav li a {
-    position: relative;
     display: block;
-    padding: 0 10%;
-    height: 100%;
-    border-bottom: 1px solid #dfdbec;
+    width: 100%; /* Make links span the full width */
+    text-align: center; /* Align text in the center */
+    padding: 0; /* Remove padding for better centering */
+    font-size: 1.2rem;
     color: #3a393f;
-    font-size: 20px;
-    font-size: 1.25rem;
-    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
 }
+
+
 #main-nav li a span {
     position: absolute;
     left: 50%;
@@ -216,8 +285,10 @@ Main components
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-.no-touch #main-nav li a:hover {
-    background-color: #FFF;
+
+#main-nav li a:hover {
+    background-color: inherit !important; /* Removes hover background */
+    transition: none !important; /* Removes any hover animations */
 }
 #main-nav li:last-child a {
     border-bottom: none;
@@ -320,3 +391,5 @@ Main components
     -moz-transition-delay: 0s;
     transition-delay: 0s;
 }
+
+

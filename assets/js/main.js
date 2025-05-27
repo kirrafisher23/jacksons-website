@@ -1,97 +1,33 @@
 "use strict";
 
-
 jQuery(document).ready(function ($) {
-
     jQuery(window).load(function () {
         jQuery(".loaded").fadeOut();
         jQuery(".preloader").delay(1000).fadeOut("slow");
     });
+
     /*---------------------------------------------*
      * Mobile menu
      ---------------------------------------------*/
-//    jQuery('.navbar-collapse').find('a[href*=#]:not([href=#])').click(function () {
-//        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-//            var target = $(this.hash);
-//            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-//            if (target.length) {
-//                $('html,body').animate({
-//                    scrollTop: (target.offset().top - 40)
-//                }, 1000);
-//                if ($('.navbar-toggle').css('display') != 'none') {
-//                    $(this).parents('.container').find(".navbar-toggle").trigger("click");
-//                }
-//                return false;
-//            }
-//        }
-//    });
+    const isIndexPage = window.location.pathname.includes("index.html") || window.location.pathname === "/";
 
-
+    if (isIndexPage) {
+        initializeSinglePageScroll();
+    } else {
+        initializeMultiPageNav();
+    }
 
     /*---------------------------------------------*
-     * STICKY scroll
+     * WOW Animation Initialization
      ---------------------------------------------*/
-
-//    jQuery(".main-nav").localScroll();
-
-    $('.body').scrollSpy();
-
-//    $('.button-collapse').sideNav({
-//        menuWidth: 250, // Default is 240
-//        edge: 'right', // Choose the horizontal origin
-//        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-//    }
-//    );
-
-    jQuery(".dropdown-button").dropdown({
-        inDuration: 300,
-        outDuration: 255,
-        constrain_width: false,
-        hover: true,
-        gutter: 0,
-        belowOrigin: false,
-        alignment: 'right'
-    });
-
-
-
-    /*---------------------------------------------*
-     * STICKY scroll
-     ---------------------------------------------*/
-
-//    $('').localScroll();
-
-    /*---------------------------------------------*
-     * WOW
-     ---------------------------------------------*/
-
     var wow = new WOW({
         mobile: false // trigger animations on mobile devices (default is true)
     });
     wow.init();
 
-    /* ---------------------------------------------------------------------
-     Carousel
-     ---------------------------------------------------------------------= */
-
-    $('.test_slider').owlCarousel({
-        responsiveClass: true,
-        autoplay: false,
-        items: 1,
-        loop: true,
-        dots: false,
-        nav: false,
-        navText: [
-            "<i class='lnr lnr-chevron-left'></i>",
-            "<i class='lnr lnr-chevron-right'></i>"
-        ],
-        autoplayHoverPause: true
-
-    });
-
-
-// scroll Up
-
+    /*---------------------------------------------*
+     * Scroll Up Button
+     ---------------------------------------------*/
     jQuery(window).scroll(function () {
         if ($(this).scrollTop() > 600) {
             $('.scrollup').fadeIn('slow');
@@ -100,11 +36,13 @@ jQuery(document).ready(function ($) {
         }
     });
     jQuery('.scrollup').click(function () {
-        $("html, body").animate({scrollTop: 0}, 1000);
+        $("html, body").animate({ scrollTop: 0 }, 1000);
         return false;
     });
 
-
+    /*---------------------------------------------*
+     * Gallery Popup
+     ---------------------------------------------*/
     jQuery('.gallery-img').magnificPopup({
         type: 'image',
         gallery: {
@@ -112,27 +50,9 @@ jQuery(document).ready(function ($) {
         }
     });
 
-
-
     /*---------------------------------------------*
-     * Menu Section
+     * Blurred Image - Clip Effect
      ---------------------------------------------*/
-
-    $('.cd-menu-trigger').on('click', function (event) {
-        event.preventDefault();
-        $('.home-main-content').addClass('move-out');
-        $('#main-nav').addClass('is-visible');
-        $('.cd-shadow-layer').addClass('is-visible');
-    });
-    //close menu
-    $('.cd-close-menu').on('click', function (event) {
-        event.preventDefault();
-        $('.home-main-content').removeClass('move-out');
-        $('#main-nav').removeClass('is-visible');
-        $('.cd-shadow-layer').removeClass('is-visible');
-    });
-
-    //clipped image - blur effect
     set_clip_property();
     $(window).on('resize', function () {
         set_clip_property();
@@ -140,53 +60,110 @@ jQuery(document).ready(function ($) {
 
     function set_clip_property() {
         var $header_height = $('.cd-header').height(),
-                $window_height = $(window).height(),
-                $header_top = $window_height - $header_height,
-                $window_width = $(window).width();
+            $window_height = $(window).height(),
+            $header_top = $window_height - $header_height,
+            $window_width = $(window).width();
         $('.cd-blurred-bg').css('clip', 'rect(' + $header_top + 'px, ' + $window_width + 'px, ' + $window_height + 'px, 0px)');
     }
-    $('#main-nav a[href^="#"]').on('click', function (event) {
-        event.preventDefault();
-        var target = $(this.hash);
-        $('.home-main-content').removeClass('move-out');
-        $('#main-nav').removeClass('is-visible');
-        $('.cd-shadow-layer').removeClass('is-visible');
-        $('body,html').animate(
-                {'scrollTop': target.offset().top},
-                900
-                );
+
+    // End of Main Code
+});
+
+/*---------------------------------------------*
+ * Single Page Scroll Logic (Index Page)
+ ---------------------------------------------*/
+function initializeSinglePageScroll() {
+    const menuTrigger = $(".cd-menu-trigger");
+    const mainNav = $("#main-nav");
+    const shadowLayer = $(".cd-shadow-layer");
+
+    // Open Menu
+    menuTrigger.on("click", function (e) {
+        e.preventDefault();
+        mainNav.addClass("is-visible");
+        shadowLayer.addClass("is-visible");
+        $(".home-main-content").addClass("move-out");
     });
-    
-    
-// scrolldown icon
-$('.scrolldown a').bind('click', function () {
-    $('html , body').stop().animate({
-        scrollTop: $($(this).attr('href')).offset().top - 160
-    }, 1500, 'easeInOutExpo');
-    event.preventDefault();
+
+    // Close Menu
+    $(".cd-close-menu, .cd-shadow-layer").on("click", function (e) {
+        e.preventDefault();
+        mainNav.removeClass("is-visible");
+        shadowLayer.removeClass("is-visible");
+        $(".home-main-content").removeClass("move-out");
+    });
+
+    // Smooth Scrolling for Anchors
+    $('#main-nav a[href^="#"]').on("click", function (e) {
+        e.preventDefault();
+        const target = $($(this).attr("href"));
+        if (target.length) {
+            $("body,html").animate(
+                { scrollTop: target.offset().top },
+                900
+            );
+            mainNav.removeClass("is-visible");
+            shadowLayer.removeClass("is-visible");
+            $(".home-main-content").removeClass("move-out");
+        }
+    });
+}
+
+/*---------------------------------------------*
+ * Multi-Page Navigation Logic
+ ---------------------------------------------*/
+function initializeMultiPageNav() {
+    const menuTrigger = $(".cd-menu-trigger");
+    const mainNav = $("#main-nav");
+    const shadowLayer = $(".cd-shadow-layer");
+
+    // Open Menu
+    menuTrigger.on("click", function (e) {
+        e.preventDefault();
+        mainNav.addClass("is-visible");
+        shadowLayer.addClass("is-visible");
+    });
+
+    // Close Menu
+    $(".cd-close-menu, .cd-shadow-layer").on("click", function (e) {
+        e.preventDefault();
+        mainNav.removeClass("is-visible");
+        shadowLayer.removeClass("is-visible");
+    });
+
+    // Close Menu When Clicking a Link
+    $("#main-nav a").on("click", function () {
+        mainNav.removeClass("is-visible");
+        shadowLayer.removeClass("is-visible");
+    });
+}
+
+// Get the modal elements
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("modalImg");
+const captionText = document.getElementById("caption");
+const closeModal = document.querySelector(".close");
+
+// Add click event to all images with the class "myImg"
+document.querySelectorAll(".myImg").forEach((img) => {
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src; // Set the modal image source
+        captionText.innerHTML = this.alt; // Set the modal caption
+    };
 });
 
+// Close modal when clicking the "close" button
+closeModal.onclick = function () {
+    modal.style.display = "none";
+};
 
-
-
-
-    //End
-});
-
-
-
-
-jQuery(document).on("scroll", function () {
-    if ($(document).scrollTop() > 120) {
-        $("header").addClass("small");
-    } else {
-        $("header").removeClass("small");
+// Close modal when clicking outside of the modal image
+modal.onclick = function (e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
     }
-});
+};
 
-jQuery(document).on('click', '.navbar-collapse.in', function (e) {
-    if ($(e.target).is('a')) {
-        $(this).collapse('hide');
-    }
-});
+
 
