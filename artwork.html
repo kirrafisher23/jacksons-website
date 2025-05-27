@@ -7,13 +7,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Jackson Domenico | Artwork</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
-        
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="tinyLOGO.png">
 
+        <!--SEO bullshit-->
+        <meta name="keywords" content="Ceramist, Ceramics, Artist, 
+        East Coast Artists, NYC based Ceramist, Florida based Ceramist, Queer Artist, Neurodivergent Artist, Fiber art">
+        <meta name="description" content="Ceramist website for showcasing">
+        <meta name="author" content="Kirra Fisher">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+
+        
+        <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
         <!-- Raleway Google fonts  -->
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,400italic,500,100italic,700' rel='stylesheet' type='text/css'>
 
@@ -96,17 +105,29 @@
             </section><!-- End of Home Section -->
             
 
-            <div class="img-container">
-                <img class="myImg" src="assets/images/history/Stonefiber Diatom (3094 x 2640).jpg" alt="Stonefiber Diatom Size: 9in x 9in x 7in" style="width:100%;max-width:300px">
-                <img class="myImg" src="assets/images/history/IMG_7394.jpg" alt="Size: N/A" style="width:100%;max-width:300px">
-                <img class="myImg" src="assets/images/history/cup shelf 2 (2085 x 2889).jpg" alt="Cup Shelf 2 Size: N/A" style="width:100%;max-width:300px">
-                <img class="myImg" src="assets/images/quilt work.jpg" alt="Quilt Size: N/A" style="width:100%;max-width:300px">
+            <!-- Image Grid -->
+            <div class="img-grid">
+                <div class="img-container">
+                    <img class="gallery-img" src="assets/images/history/Stonefiber Diatom (3094 x 2640).jpg" alt="Stonefiber Diatom Size: 9in x 9in x 7in">
+                    <img class="gallery-img" src="assets/images/history/cup shelf 2 (2085 x 2889).jpg" alt="Cup Shelf 2 Size: N/A">
+                    <img class="gallery-img" src="assets/images/history/Listen and Remember_ Storytime 2973 × 2748.jpg" alt="Listen and Remember Size: N/A">
+                    <img class="gallery-img" src="assets/images/history/stonefiber botanicals 3802 × 2800.jpg" alt="Stonefiber Botanicals Size: N/A">
+                    <img class="gallery-img" src="assets/images/history/Stonefiber Sunken Structure 2973 × 2748.jpg" alt="Stonefiber Sunken Structure Size: N/A">
+                </div>
+                <div class="img-container">
+                    <img class="gallery-img" src="assets/images/history/sunken city2 3339 × 2658.jpg" alt="Sunken City #2 Size: N/A">
+                    <img class="gallery-img" src="assets/images/history/tide pile 2340 × 1947.jpg" alt="Tide Pile Size: N/A">
+                    <img class="gallery-img" src="assets/images/history/trimmer dragon 2340 × 1947.jpg" alt="Trimmer Dragon Size: N/A">
+                    <img class="gallery-img" src="assets/images/history/Rangeline (equidistance) .jpg" alt="Rangeline Size: N/A">
+                </div>
             </div>
 
-            <!-- Single Modal -->
-            <div id="myModal" class="modal">
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox">
                 <span class="close">&times;</span>
-                <img class="modal-content" id="modalImg">
+                <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+                <img class="lightbox-content" id="lightbox-img">
+                <span class="next" onclick="changeImage(1)">&#10095;</span>
                 <div id="caption"></div>
             </div>
 
@@ -117,7 +138,7 @@
                     <div class="main_footer">
                         <!-- Footer Content -->
                         <div class="socialsart">
-                            <a href="index.html">© 2025 Jackson Domenico</a>
+                            <a href="index.html">Jackson Domenico</a>
                             <a href="mailto:jacksondomenico231@gmail.com" class="icon brands circle">
                                 <i class="fa fa-envelope"></i>
                                 <span class="label">Gmail</span>
@@ -126,10 +147,6 @@
                                 <i class="fab fa-instagram"></i>
                                 <span class="label">Instagram</span>
                             </a>
-                            <a href="tel:+15614146842" class="icon brands circle">
-                                <i class="fa fa-phone"></i>
-                                <span class="label">Phone</span>
-                            </a> 
                         </div>
                     </div>
                 </div>
